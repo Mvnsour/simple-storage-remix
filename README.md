@@ -42,7 +42,7 @@ Il couvre les principes fondamentaux de Solidity et du développement de contrat
 - Types de variables et visibilité
 - Fonctions et types de retour
 - Tableaux (fixes et dynamiques)
-- Structures et données imbriquées
+- Structs et données imbriquées
 - Mapping
-- Mémoire vs calldata
+- Memory vs calldata
 - Premier déploiement sur Remix
