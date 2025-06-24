@@ -9,7 +9,7 @@ pragma solidity >=0.8.19 <0.9.0; // use versions between 0.8.19 and 0.9.0 (exclu
     address fakeAddress = 0xb5A3C30105cC2cAdce411bcb49679d7775bcb2fE;
     bytes32 favBytes = "cat"; */
 
- contract SimpleStorager {
+ contract SimpleStorage {
     uint256  myFavNum; // default value = 0
 
     // uint256[] favNumList;
