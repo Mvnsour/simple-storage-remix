@@ -1,39 +1,29 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
-contract SimpleStorage {
-    uint256  myFavNum;
-
-    struct Person {
-        uint256 favNum;
-        string name;
-    }
-
-    Person[] public listofPeople; 
-
-
-    mapping(string => uint256) public nameToFavNum;
-
-    function store(uint256 _favNum) public {
-        myFavNum = _favNum;
-    }
-
-    function retrieve() public view returns(uint256) {
-        return myFavNum;
-    }
-
-    function addPerson(string memory _name, uint256 _favNum) public {
-        listofPeople.push( Person(_favNum, _name) );
-        nameToFavNum[_name] = _favNum;
-    }
-
-}
+import { SimpleStorage } from "./SimpleStorage.sol";
 
 contract StorageFactory {
 
-    SimpleStorage public simpleStorage;
+    SimpleStorage[] public simpleStorageContractList;
 
     function createSimpleStorageContract() public {
-        simpleStorage = new SimpleStorage();
+      // Create a new instance of the SimpleStorage contract
+      SimpleStorage newSimpleStorageContract = new SimpleStorage();
+      // Add new contract to the list
+      simpleStorageContractList.push(newSimpleStorageContract);
+    }
+
+    function sfStore(uint256 _simpleStorageIdx, uint256 _newSimpleStorageNum) public {     //sfStore means StorageFactoryStore //SimpleStorage store function will be called here
+      //SimpleStorage store function will be called here
+      // Address
+      // ABI (Application Binary Interface) will tell our code exactly how he can interact with another contract
+      SimpleStorage mySimpleStorage = simpleStorageContractList[_simpleStorageIdx];
+      mySimpleStorage.store(_newSimpleStorageNum);
+    }
+
+    function sfGet(uint256 _simpleStorageIdx) public view returns (uint256) {
+      SimpleStorage mySimpleStorage = simpleStorageContractList[_simpleStorageIdx];
+      return mySimpleStorage.retrieve();
     }
 }
