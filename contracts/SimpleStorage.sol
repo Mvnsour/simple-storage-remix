@@ -28,8 +28,8 @@ pragma solidity >=0.8.19 <0.9.0; // use versions between 0.8.19 and 0.9.0 (exclu
     // Malik -> 89, the string is the key of each numb and the default value is 0
     mapping(string => uint256) public nameToFavNum;
 
-    function store(uint256 _favNum) public {
-        myFavNum = _favNum;
+    function store(uint256 _favNum) public virtual {
+        myFavNum = _favNum; // +7
     }
 
     // 2 types of view : view (for reading or state view) or pure (for calculations without reading or modifying state)
