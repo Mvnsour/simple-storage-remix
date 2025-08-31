@@ -35,7 +35,7 @@ It introduces the core concepts of Solidity and smart contract development using
 ### Deployment Highlights
 - First contract deployed using Remix
 - Metamask integration for signing transactions
-- Optional deployment on ZKsync L2
+- Deployment on ZKsync L2
 
 ### Resources
 - [Simple Storage Starter Code](https://github.com/cyfrin/remix-simple-storage-cu)
@@ -82,7 +82,7 @@ Il introduit les bases du langage Solidity et le développement de smart contrac
 ### Déploiement
 - Premier contrat déployé avec Remix IDE
 - Connexion avec Metamask pour signer les transactions
-- Déploiement possible sur ZKsync Layer 2
+- Déploiement sur ZKsync Layer 2
 
 ### Ressources utiles
 - [Code de départ – Simple Storage](https://github.com/cyfrin/remix-simple-storage-cu)
